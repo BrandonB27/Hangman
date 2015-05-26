@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Brandon Builes</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1 class="text-center"><strong>Hangman</strong></h1>
+                <p class="text-center text-danger"><strong> ***PLEASE REFRESH PAGE ONCE BEFORE BEGINNING***</strong></p>
+            </div>
+            
+            <div class="page-header">
+                <h2 class="text-center">Select a Player</h2>
+                <p class="text-center text-danger"><strong>***Please Select a Player First***</strong></p>
+                <p class="text-center text-warning"><strong>(It is not necessary to pick a Player everytime after the initial selection, Only when you want to change players)</strong></p>
+                <input class="btn btn-success btn-block" type="button" id="play1" value="Player 1" />
+                <input class="btn btn-warning btn-block" type="button" id="play2" value="Player 2" />
+                <br>
+            </div>
+            
+            <div class="page-header">
+                <h2 class="text-center">Select a Category Every Time</h2>
+                <p class="text-center text-danger"><strong>***Please Select a Category Everytime***</strong></p>
+                <input class="btn btn-primary btn-block" type="button" id="c" value="City" />
+                <input class="btn btn-primary btn-block" type="button" id="cc" value="Company" />
+                <input class="btn btn-primary btn-block" type="button" id="ccc" value="FullName" />
+                <input class="btn btn-primary btn-block" type="button" id="rand" value="Random" />
+                <br>
+            </div>
+            
+            <div class="col-md-2">
+                <div id="imghang" class="image0"></div>
+            </div>
+
+            <div id="word" class="col-md-4 text-center">
+                <p><strong id="gameWord"></strong></p>
+            </div>
+
+            <div id="tries" class="col-md-4 text-center">
+                <h4>Letter You Have Input</h4>
+                <p><strong id="triesbefore"><em>Letters used</em></strong></p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 text-center"></div>
+                    <br/>
+                    <br/>
+                    <br/>
+                   <!-- <input type="text" maxlength="1" id="trie" placeholder="Letter Input" />-->
+                    </div>
+            <div class="text-center"><INPUT class="btn-danger" TYPE="BUTTON" id="butt" VALUE="a">
+ <INPUT class="btn-danger" TYPE="BUTTON" id="butt2" VALUE="b">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt3" VALUE="c">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt4" VALUE="d">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt5" VALUE="e">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt6" VALUE="f">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt7" VALUE="g">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt8" VALUE="h">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt9" VALUE="i">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt10" VALUE="j">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt11" VALUE="k">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt12" VALUE="l">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt13" VALUE="m">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt14" VALUE="n">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt15" VALUE="o">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt16" VALUE="p">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt17" VALUE="q">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt18" VALUE="r">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt19" VALUE="s">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt20" VALUE="t">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt21" VALUE="u">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt22" VALUE="v">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt23" VALUE="w">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt24" VALUE="x">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt25" VALUE="y">
+<INPUT class="btn-danger" TYPE="BUTTON" id="butt26" VALUE="z"></div>
+                        <br>
+                        <div class="text-center">Player 1 Lives: <div id="test"></div><div>Player 2 Lives: <div id="test2"></div><br>
+                    <div  class="text-center">Player 1 Latitude & Longitude: <div id="location"></div><div id="location2"></div> <br>
+                    <div  class="text-center">Player 2 Latitude & Longitude: <div id="location3"></div><div id="location4"></div>
+                    <br>
+                    <br>
+                    </div>
+                </div>
+                <div>
+                <input class="btn btn-danger btn-block" type="button" id="BorrarLocalStorage" value="Borrar LocalStorage (*DoubleClick*)" />
+                </div>
+            </div>
+        </div>
+        <script src="java/jquery.min.js" type="text/javascript"></script>
+        <script src="java/hangman.js" type="text/javascript"></script>
+        <div class="modal fade" id="alertBox" tabindex="-1" role="dialog" aria-labelledby="alertBox" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4><a onclick="resetGame();" class="close" data-dismiss="modal" aria-hidden="true">&times;</a></h4>
+                        <h4 id="alertBoxTitle"></h4>
+                    </div>
+                    <div class="modal-body" id="alertBoxContent"></div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="java/bootstrap.min.js" type="text/javascript"></script>
+    </body>
+</html>
